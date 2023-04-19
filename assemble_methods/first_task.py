@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -83,9 +84,9 @@ def test_accuracy_dependence_on_estimators_amount(source, map, methodIsBagging):
     training_data, test_data, training_target, test_target = split_data_for_classification(test_percent, source,map)
 
     est_amount = [5, 10, 50, 100, 250, 500, 750, 1000]
-    svc = SVC(probability=True, kernel='linear')
+    svc = SVC(probability=True,kernel='linear')
 
-    estimators = [GaussianNB(), svc, DecisionTreeClassifier()]
+    estimators = [GaussianNB(), KNeighborsClassifier(), DecisionTreeClassifier()] #KNeighborsClassifier(), SVC() для 1, svc для 2
 
     for estimator in estimators:
         test_accs = []
