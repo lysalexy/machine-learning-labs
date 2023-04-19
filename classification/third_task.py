@@ -1,10 +1,7 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-from first_task import prepare_data
 from first_task import do_accuracy_graphs
 from first_task import draw_graph
 
