@@ -8,7 +8,7 @@ def generate_dataset_depend_from_all_other_variables(data, testPercent, var):
     Y = data[:, var]
     X = np.delete(data, [var], axis=1)
 
-    return train_test_split(X, Y, test_size=0.4)
+    return train_test_split(X, Y, test_size=testPercent, random_state=42)
 
 
 def generate_dataset_depend_from_one_variable(data, testPercent, numY, numX):
@@ -38,7 +38,7 @@ def generate_dataset_depend_from_three_variables(data, testPercent, numY, numX1,
         X.append([data[i][numX1], data[i][numX2], data[i][numX3]])
         Y.append([data[i][numY]])
 
-    return train_test_split(X, Y, test_size=testPercent)
+    return train_test_split(X, Y, test_size=testPercent, random_state=42)
 
 
 def get_results_for_classifier(clf, testPercent, data, var, var2, var3, var4):
