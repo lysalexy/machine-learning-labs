@@ -86,7 +86,7 @@ def test_accuracy_dependence_on_estimators_amount(source, map, methodIsBagging):
     est_amount = [5, 10, 50, 100, 250, 500, 750, 1000]
     svc = SVC(probability=True,kernel='linear')
 
-    estimators = [GaussianNB(), KNeighborsClassifier(), DecisionTreeClassifier()] #KNeighborsClassifier(), SVC() для 1, svc для 2
+    estimators = [GaussianNB(), KNeighborsClassifier(), DecisionTreeClassifier()] #KNeighborsClassifier(), SVC() для 1, svc для 2 без KNeighborsClassifier()
 
     for estimator in estimators:
         test_accs = []

@@ -59,9 +59,9 @@ def third_task():
     test_target = lab.fit_transform(test_target)
 
     estimators = [
-        ('bayess',GaussianNB()),
+        # ('bayess',GaussianNB()),
         ('kneignb', KNeighborsClassifier()),
-        ('roots', DecisionTreeClassifier()),
+        # ('roots', DecisionTreeClassifier()),
         ('svc',SVC())
     ]
 
