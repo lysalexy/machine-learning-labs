@@ -12,7 +12,7 @@ def seventh_task():
     Y = data[:, 1]
     X = X.reshape(-1, 1)
 
-    plt.plot(X, Y)
+    plt.scatter(X, Y)
 
     clf = LinearRegression()
     clf.fit(X, Y)

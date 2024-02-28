@@ -9,12 +9,12 @@ from eighth_task import eighth_task
 from ninth_task import ninth_task
 
 if __name__ == '__main__':
-    #first_task()
+    first_task()
     second_task()
-    #third_task()
-    #fourth_task()
-    #fifth_task()
-    #sixth_task()
-    #seventh_task()
-    #eighth_task()
-    #ninth_task()
+    third_task()
+    fourth_task()
+    fifth_task()
+    sixth_task()
+    seventh_task()
+    eighth_task()
+    ninth_task()
